@@ -17,4 +17,9 @@ export class UserService {
     .pipe( map( res => res['data']));
   }
 
+  getUser(id:string) {
+    return this.http.get(`${environment.apiUrl}/users/${id}`)
+    .pipe( map( res => res['data']));
+  }
+  
 }
